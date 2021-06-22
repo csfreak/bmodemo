@@ -2,12 +2,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: quarkus-app
+  name: quarkus-app-2
   namespace: argocd-test
 spec:
   destination:
     namespace: demo
-    server: https://kubernetes.default.svc
+    server: https://api.cluster-b9e5.sandbox1580.opentlc.com:6443
   project: default
   source:
     helm:
