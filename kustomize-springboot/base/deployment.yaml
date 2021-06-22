@@ -25,3 +25,6 @@ spec:
         - name: "demo-config"
           configMap:
             name: "demo-configmap"
+      selector:
+        matchLabels:
+          node-role.kubernetes.io/worker: present
