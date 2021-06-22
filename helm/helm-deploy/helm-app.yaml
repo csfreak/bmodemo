@@ -11,7 +11,7 @@ spec:
   source:
     path: helm/argo-app
     repoURL: https://github.com/csfreak/bmodemo
-    targetRevision: master
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
