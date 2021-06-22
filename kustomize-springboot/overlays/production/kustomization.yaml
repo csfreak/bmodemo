@@ -1,7 +1,9 @@
-resources:
+bases:
   - ../../base
 patchesStrategicMerge:
   - patch.yaml
   - healthcheck_patch.yaml
   - memorylimit_patch.yaml
 namePrefix: production-
+commonLabels:
+  env: prod
