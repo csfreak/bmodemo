@@ -1,7 +1,11 @@
 bases:
   - ../../base
-patchesStrategicMerge:
-  - patch.yaml
+patches:
+  - healthcheck_patch.yaml
+  - memorylimit_patch.yaml
+  - replicas_patch.yaml
 namePrefix: production-
-commonLabels:
-  env: prod
+configMapGenerator:
+  - name: demo-configmap
+    files:
+      - application.properties
