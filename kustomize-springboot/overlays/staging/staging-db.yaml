@@ -6,13 +6,21 @@ metadata:
     name: staging-db
     app: staging-db
 spec:
+  initContainers:
+    - image: mysql:latest
+      command:
+        - mysql_ssl_rsa_setup
+      env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: admin
+        - name: MYSQL_DATABASE
+          value: db_example
+      volumeMounts:
+        - name: mysql-storage
+          mountPath: /var/lib/mysql
   containers:
     - name: mysql
       image: mysql:latest
-      initContainers:
-        image: mysql:latest
-        command:
-          - mysql_ssl_rsa_setup
       env:
         - name: MYSQL_ROOT_PASSWORD
           value: admin
