@@ -15,13 +15,19 @@ spec:
     spec:
       containers:
         - name: sbdemo
+          environment:
+            TMP: "/tempdir"
           image: jingfang/sbdemo
           ports:
             - containerPort: 8080
           volumeMounts:
             - name: demo-config
               mountPath: /config
+            - name: tempdir
+              mountPath: /tempdir
       volumes:
         - name: "demo-config"
           configMap:
             name: "demo-configmap"
+        - name: "tempdir"
+          emptyDir: {}
