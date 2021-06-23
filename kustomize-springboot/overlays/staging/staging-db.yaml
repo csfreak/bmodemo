@@ -7,7 +7,8 @@ metadata:
     app: staging-db
 spec:
   initContainers:
-    - image: mysql:latest
+    - name: mysql-init
+      image: mysql:latest
       command:
         - mysql_ssl_rsa_setup
       env:
