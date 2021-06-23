@@ -16,7 +16,7 @@ spec:
       containers:
         - name: sbdemo
           env:
-            - name: TMP
+            - name: TMPDIR
               value: "/tempdir"
           image: jingfang/sbdemo
           ports:
