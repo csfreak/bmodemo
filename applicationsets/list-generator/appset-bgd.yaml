@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: bgd
-  namespace: openshift-gitops
+  namespace: argocd-test
 spec:
   generators:
     - list:
@@ -22,8 +22,8 @@ spec:
           selfHeal: true
       source:
         repoURL: https://github.com/csfreak/bmodemo
-        targetRevision: master
+        targetRevision: main
         path: applicationsets/list-generator/overlays/{{cluster}}
       destination:
         server: "{{url}}"
-        namespace: bgd
+        namespace: bgd-appset

@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: quarkus-app-2
+  name: quarkus-app
   namespace: argocd-test
 spec:
   destination:
