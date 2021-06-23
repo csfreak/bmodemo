@@ -9,6 +9,10 @@ spec:
   containers:
     - name: mysql
       image: mysql:latest
+      initContainers:
+        image: mysql:latest
+        command:
+          - mysql_ssl_rsa_setup
       env:
         - name: MYSQL_ROOT_PASSWORD
           value: admin
