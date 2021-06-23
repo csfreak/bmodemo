@@ -9,3 +9,5 @@ configMapGenerator:
   - name: demo-configmap
     files:
       - application.properties
+resources:
+  - prod-db.yaml

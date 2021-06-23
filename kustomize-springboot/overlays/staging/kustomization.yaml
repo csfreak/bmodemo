@@ -5,3 +5,5 @@ configMapGenerator:
   - name: demo-configmap
     files:
       - application.properties
+resources:
+  - staging-db.yaml
