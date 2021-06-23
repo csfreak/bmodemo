@@ -16,8 +16,8 @@ spec:
       containers:
         - name: sbdemo
           env:
-            - name: TMPDIR
-              value: "/tempdir"
+            - name: _JAVA_OPTIONS
+              value: "-Djava.io.tmpdir=/tempdir"
           image: jingfang/sbdemo
           ports:
             - containerPort: 8080
