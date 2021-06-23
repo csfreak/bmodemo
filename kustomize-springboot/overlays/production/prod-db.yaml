@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: prod-db
+  name: db
   labels:
     name: prod-db
     app: prod-db
@@ -28,7 +28,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: prod-db
+  name: db
   labels:
     app: prod-db
 spec:
