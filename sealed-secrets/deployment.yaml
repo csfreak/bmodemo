@@ -33,7 +33,7 @@ spec:
       volumes:
         - name: secrets
           secret:
-            secretName: ss-secret
+            secretName: test-secret
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
